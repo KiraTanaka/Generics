@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    class ProcessorBuilder
+    class EntityBuilder<TEngine>
     {
-        public EntityBuilder<TEngine> CreateEngine<TEngine>()
+        public LoggerBuilder<TEngine,TEntity> For<TEntity>()
         {
-            return new EntityBuilder<TEngine>();
+            return new LoggerBuilder<TEngine, TEntity>();
         }
     }
 }

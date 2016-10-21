@@ -7,8 +7,5 @@ using System.Threading.Tasks;
 namespace Generics
 {
     class Processor<TEngine, TEntity, TLogger>
-    {
-        public Processor() { }
-
-    }
+    { }
 }

@@ -24,7 +24,9 @@ namespace Generics
         }
         TObject GetObjectOrDefaultByGuid<TObject>(Guid guid)
         {
-            return Database[typeof(TObject)].ContainsKey(guid) ? (TObject)Database[typeof(TObject)][guid] : default(TObject);
+            object objectByGuid;
+            Database[typeof(TObject)].TryGetValue(guid, out objectByGuid);
+            return (TObject)objectByGuid;
         }
     }
 }

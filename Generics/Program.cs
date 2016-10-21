@@ -13,9 +13,8 @@ namespace Generics
         public class MyLogger { }
         static void Main(string[] args)
         {
-            Processor<MyEngine, MyEntity, MyLogger> p = new Processor<MyEngine, MyEntity, MyLogger>();
-            // Processor<MyEngine,MyEntity,MyLogger> processor =
-            // ProcessorBuilder.CreateEngine<p.GetType()>().For<MyEntity>().With<MyLogger>();
+            ProcessorBuilder ProcessorBuilder = new ProcessorBuilder();
+            Processor<MyEngine,MyEntity,MyLogger> processor =ProcessorBuilder.CreateEngine<MyEngine>().For<MyEntity>().With<MyLogger>();
         }
     }
 }

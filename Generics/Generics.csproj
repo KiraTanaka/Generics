@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityBuilder.cs" />
+    <Compile Include="LoggerBuilder.cs" />
     <Compile Include="Processor.cs" />
     <Compile Include="ProcessorBuilder.cs" />
     <Compile Include="Program.cs" />
